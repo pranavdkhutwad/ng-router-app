@@ -1,0 +1,48 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit Task</h4>
+</div>
+<div class="modal-body">
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <input
+        type="text"
+        name="name"
+        placeholder="Task Name"
+        class="form-control"
+        formControlName="name"
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        rows="3"
+        name="description"
+        placeholder="Task Description"
+        formControlName="description"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <input
+        class="form-control"
+        type="number"
+        name="priority"
+        placeholder="Task Priority"
+        formControlName="priority"
+      />
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <div>
+    <button (click)="updateTask()" type="button" class="btn btn-success">
+      Update Task
+    </button>
+  </div>
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close('Close click')"
+  >
+    Close
+  </button>
+</div>

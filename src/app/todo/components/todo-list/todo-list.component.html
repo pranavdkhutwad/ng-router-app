@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-4 col-md-4">
+    <h5>High Priority List</h5>
+    <app-todo-item
+      (deleteEvent)="deleteHandler($event)"
+      (updateTaskEvent)="updateHandler($event)"
+      [item]="task"
+      *ngFor="let task of highPriorities"
+    ></app-todo-item>
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <h5>Medium Priority List</h5>
+    <app-todo-item
+      (deleteEvent)="deleteHandler($event)"
+      (updateTaskEvent)="updateHandler($event)"
+      [item]="task"
+      *ngFor="let task of mediumPriorities"
+    ></app-todo-item>
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <h5>Low Priority List</h5>
+    <app-todo-item
+      (deleteEvent)="deleteHandler($event)"
+      (updateTaskEvent)="updateHandler($event)"
+      [item]="task"
+      *ngFor="let task of lowPriorities"
+    ></app-todo-item>
+  </div>
+</div>

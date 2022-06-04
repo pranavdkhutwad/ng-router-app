@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-lg-4 col-md-4">
+      <app-todo-form (taskEvent)="receiveTask($event)"></app-todo-form>
+    </div>
+    <div class="col-lg-8 col-md-8">
+      <app-todo-list
+        (deleteEvent)="receiveTask($event)"
+        (updateTaskEvent)="receiveTask($event)"
+        [highPriorities]="highPriorityList"
+        [mediumPriorities]="mediumPriorityList"
+        [lowPriorities]="lowPriorityList"
+      ></app-todo-list>
+    </div>
+  </div>
+</div>
